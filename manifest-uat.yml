@@ -3,5 +3,6 @@ applications:
 - name: spring-music-uat
   memory: 512M
   instances: 1
-  host: s1p-10-spring-music-uat
+  host: spring-music-crdant-uat
   buildpack: java_buildpack
+  random-route: true

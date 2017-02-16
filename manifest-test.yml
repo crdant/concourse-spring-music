@@ -3,5 +3,6 @@ applications:
 - name: spring-music-test
   memory: 512M
   instances: 1
-  host: s1p-10-spring-music-test
+  host: spring-music-crdant-test
   buildpack: java_buildpack
+  random-route: true
