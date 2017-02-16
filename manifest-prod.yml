@@ -5,4 +5,3 @@ applications:
   instances: 1
   host: spring-music-crdant
   buildpack: java_buildpack
-  random-route: true
