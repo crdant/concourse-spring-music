@@ -155,6 +155,7 @@ resources:
   source:
     bucket: {{S3_BUCKET}}
     key: {{S3_VERSION_FILE}}
+    region_name: us-west-2
     access_key_id: {{S3_ACCESS_KEY_ID}}
     secret_access_key: {{S3_SECRET_ACCESS_KEY}}
     initial_version: 1.0.0
@@ -163,8 +164,9 @@ resources:
   type: s3
   source:
     bucket: {{S3_BUCKET}}
-    regexp: {{S3_PIPELINE_ARTIFACTS}}
+    regexp: spring-music-(.*).war
     access_key_id: {{S3_ACCESS_KEY_ID}}
+    region_name: us-west-2
     secret_access_key: {{S3_SECRET_ACCESS_KEY}}
 
 - name: production-release
@@ -174,3 +176,4 @@ resources:
     regexp: {{S3_DEPLOYMENTS}}
     access_key_id: {{S3_ACCESS_KEY_ID}}
     secret_access_key: {{S3_SECRET_ACCESS_KEY}}
+    region_name: us-west-2
